@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>My blog</title>
+</head>
+
+<body onload="onInit()">
+
+    <div class="main-screen" onclick="toggleMenu()"></div>
+
+    <nav class="nav-main">
+        <div class="nav-container  container flex flex-center space-between">
+            <div class="logo">Blogin</div>
+            <ul class="link-container  flex-center flex">
+                <li>
+                    <a href="">Journal</a>
+                </li>
+                <li>
+                    <a href="">About</a>
+                </li>
+                <li>
+                    <a href="">Work</a>
+                </li>
+                <li>
+                    <a href="">contact</a>
+                </li>
+            </ul>
+            <button class="btn-menu" onclick="toggleMenu()">☰</button>
+        </div>
+    </nav>
+
+    <main class="card-container container">
+    </main>
+
+
+    <nav class="navbar-sec  container flex flex-center space-between">
+        <a> &#8592; Previous</a>
+        <a>Next &#8594;</a>
+    </nav>
+
+    <footer>
+        <div class="container flex flex-center flex-column">
+            <div class="logo-sec logo  ">Blogin</div>
+            <small>2021 Blogin.com - All Rights Reserved-find more free templates at pixelhint.com</small>
+            <ul class="flex-center flex">
+                <li> <a href="#" class="fa fa-facebook facebook"></a></li>
+                <li><a href="#" class="fa fa-twitter"></a></li>
+                <li><a class="fa fa-dribbble  href=""> </a></li>
+                <li><a  class=" fa fa-behance"href=""></a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="js/service.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

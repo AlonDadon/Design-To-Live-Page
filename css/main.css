@@ -1,0 +1,364 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: eurofurence;
+    src: url(../font/euro/eurof.ttf);
+}
+
+@font-face {
+    font-family: lato-bold;
+    src: url(../font/lato/lato-bold.ttf);
+}
+
+@font-face {
+    font-family: lato-regular;
+    src: url(../font/lato/lato-regular.ttf);
+}
+
+@font-face {
+    font-family: myriadpro-regular;
+    src: url(../font/myriadpro-regular/myriadpro-regular.ttf);
+}
+
+html {
+    font-family: lato-regular;
+    line-height: 1.25;
+}
+
+body {
+    margin: 0;
+    font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0 0 0 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    color: #606060;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-family: lato-bold;
+    font-size: 1.75rem;
+    color: #4F4E4E;
+    margin-bottom: 1rem;
+}
+
+a, button {
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* layout */
+
+/* main-nav */
+
+.nav-main {
+    background-color: #292929;
+    color: #FFFFFF;
+    text-align: center;
+    box-shadow: 0 0 .34rem .025rem #292929;
+    margin-bottom: .34rem;
+}
+
+.logo {
+    font-family: eurofurence, myriadpro-regular;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.logo::after {
+    content: '.';
+    color: #58C93A;
+}
+
+/* main */
+
+.card-container {
+    margin-bottom: 0.3px;
+    padding-top: 83px;
+}
+
+.card {
+    flex-direction: column;
+}
+
+.card:not(:last-child) {
+    margin-bottom: 79px;
+}
+
+.card:last-child {
+    padding-bottom: 79px;
+}
+
+.card-info {
+    flex-direction: column;
+}
+
+.card-info p:last-of-type {
+    flex: 1;
+}
+
+.card-btn {
+    align-self: flex-start;
+}
+
+.card .btn-read {
+    padding: .43rem .93rem;
+    border-radius: 2em;
+    color: #C2C1C1;
+    border: 2px solid #C2C1C1;
+    background-color: #fff;
+    position: relative;
+    transition: color .3s, border .3s, padding .6s;
+}
+
+.card .btn-read:hover {
+    color: #58C93A;
+    border: 2px solid #58C93A;
+    padding-right: 1.562rem;
+}
+
+.card .btn-read:hover::after {
+    content: ' \1F812';
+    position: absolute;
+    right: 0;
+    padding-right: .43rem;
+}
+
+/* nav-sec */
+
+.navbar-sec {
+    border: 1px solid #C2C1C1;
+    padding: 1.875rem;
+}
+
+.navbar-sec a {
+    color: #818181;
+    font-size: 1.125rem;
+}
+
+.logo-sec {
+    padding-top: 6.875rem;
+    padding-bottom: 2rem;
+}
+
+footer small {
+    text-align: center;
+    display: block;
+    margin-bottom: 2.312rem;
+}
+
+footer ul {
+    padding-bottom: 5.875rem;
+    justify-content: space-evenly;
+    width: 2.262rem;
+    height: 2.262rem;
+}
+
+footer ul li>* {
+    height: 2.562rem;
+}
+
+/* icons */
+
+.fa {
+    padding: 0.43rem;
+    font-size: 1.875rem;
+    width: 2.5rem;
+    text-align: center;
+    text-decoration: none;
+    margin-inline-end: .25rem;
+    transition: opacity .3s;
+    background-color: #E5E5E5;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook:hover {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter:hover {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-dribbble:hover {
+    background: #ea4c89;
+    color: white;
+}
+
+.fa-behance {
+    margin: 0;
+    width: auto;
+}
+
+.fa-behance:hover {
+    background: #000000;
+    color: white;
+}
+
+.container {
+    max-width: 440px;
+    margin: 0 auto;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+/* flex helper */
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+@media (min-width: 720px) {
+    .container {
+        max-width: 40.93rem;
+    }
+    .card img {
+        object-fit: contain;
+    }
+    .card-container {
+        border-inline-end: 1px solid #C2C1C1;
+        border-inline-start: 1px solid #C2C1C1;
+    }
+    
+    .link-container a:hover {
+        box-shadow: inset 0px -6px 0px 0px#58c93a;
+        color: #58C93A;
+    }
+    .link-container {
+        margin: 0;
+        background-color: #292929;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+    .link-container a {
+        width: 8.3rem;
+        border-inline-end: .062rem solid black;
+        border-inline-start: .062rem solid black;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 8.3rem;
+        transition: box-shadow .3s color .3s;
+    }
+    .btn-menu {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 820px) {
+    .container {
+        max-width: 50rem;
+    }
+    .card {
+        flex-direction: row;
+    }
+    .card img {
+        padding-inline-end: 42px;
+    }
+}
+
+@media screen and (min-width: 1050px) {
+    .container {
+        max-width: 61rem;
+    }
+}
+
+@media (max-width: 470px) {
+    .btn-menu {
+        margin-inline-end: 11px;
+    }
+}
+
+@media (max-width: 720px) {
+    .link-container {
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 50%;
+        background-color: #292929;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        margin: 0;
+        transform: translateX(100%);
+    }
+    .link-container {
+        border: inset
+    }
+    .link-container a:hover {
+        color: #58C93A;
+    }
+    body.menu-open .main-screen {
+        pointer-events: auto;
+        opacity: 1;
+    }
+    body.menu-open .link-container {
+        transform: translateX(0);
+    }
+    body.menu-open .main-screen {
+        pointer-events: auto;
+        opacity: 1;
+    }
+    .main-screen {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .5);
+        cursor: pointer;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity .8s;
+    }
+    h2 {
+        margin-bottom: 2rem;
+    }
+    .card {
+        text-align: center;
+    }
+    .card img {
+        margin-bottom: 2rem;
+    }
+    .card p:last-child {
+        margin-bottom: 1rem;
+    }
+}
